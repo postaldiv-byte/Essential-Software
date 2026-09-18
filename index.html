@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Essential Software</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f5f6f7;
+    color: #202124;
+}
+
+.header {
+    height: 58px;
+    background: white;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.header span {
+    margin-right: 10px;
+}
+
+.container {
+    display: flex;
+    height: calc(100vh - 58px);
+}
+
+.sidebar {
+    width: 220px;
+    background: #ffffff;
+    border-right: 1px solid #ddd;
+    padding: 15px 10px;
+}
+
+.sidebar-title {
+    font-size: 12px;
+    color: #777;
+    padding: 8px 12px;
+    text-transform: uppercase;
+}
+
+.menu {
+    padding: 11px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 3px;
+}
+
+.menu:hover {
+    background: #eaf2ff;
+}
+
+.main {
+    flex: 1;
+    padding: 25px;
+    overflow-y: auto;
+}
+
+.path {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.search {
+    width: 100%;
+    max-width: 450px;
+    padding: 11px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.section {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.section-title {
+    padding: 13px 18px;
+    background: #fafafa;
+    border-bottom: 1px solid #ddd;
+    font-weight: 600;
+}
+
+.file {
+    display: flex;
+    align-items: center;
+    padding: 14px 18px;
+    border-bottom: 1px solid #eee;
+}
+
+.file:last-child {
+    border-bottom: none;
+}
+
+.icon {
+    font-size: 25px;
+    width: 45px;
+}
+
+.file-info {
+    flex: 1;
+}
+
+.file-name {
+    font-weight: 500;
+}
+
+.version {
+    font-size: 12px;
+    color: #777;
+    margin-top: 4px;
+}
+
+.download {
+    background: #1677ff;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.download:hover {
+    background: #075dcc;
+}
+
+@media(max-width:700px) {
+    .sidebar {
+        width: 160px;
+    }
+
+    .file {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <span>🖥️</span> Essential Software Repository
+</div>
+
+<div class="container">
+
+    <div class="sidebar">
+
+        <div class="sidebar-title">Quick Access</div>
+
+        <div class="menu">🏠 Home</div>
+        <div class="menu">📁 Aadhaar</div>
+        <div class="menu">📁 Drivers</div>
+        <div class="menu">📁 Runtime</div>
+        <div class="menu">📁 Tools</div>
+
+    </div>
+
+    <div class="main">
+
+        <div class="path">
+            Home &nbsp;›&nbsp; Essential Software
+        </div>
+
+        <input
+            class="search"
+            type="text"
+            placeholder="🔍 Search software..."
+            onkeyup="searchFiles()"
+            id="searchBox"
+        >
+
+        <div class="section">
+
+            <div class="section-title">
+                📁 Aadhaar Software
+            </div>
+
+            <div class="file">
+
+                <div class="icon">📄</div>
+
+                <div class="file-info">
+                    <div class="file-name">
+                        Aadhaar ECA Client
+                    </div>
+
+                    <div class="version">
+                        Version 3.3.4.2.208
+                    </div>
+                </div>
+
+                <a class="download" href="#" target="_blank">
+                    Download
+                </a>
+
+            </div>
+
+
+            <div class="file">
+
+                <div class="icon">📦</div>
+
+                <div class="file-info">
+                    <div class="file-name">
+                        Aadhaar OTA Update
+                    </div>
+
+                    <div class="version">
+                        Latest OTA
+                    </div>
+                </div>
+
+                <a class="download" href="#" target="_blank">
+                    Download
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="section">
+
+            <div class="section-title">
+                📁 Biometric Drivers
+            </div>
+
+            <div class="file">
+
+                <div class="icon">📄</div>
+
+                <div class="file-info">
+                    <div class="file-name">
+                        Mantra MATISX VDM
+                    </div>
+
+                    <div class="version">
+                        Version 1.0.0.9
+                    </div>
+                </div>
+
+                <a class="download" href="#" target="_blank">
+                    Download
+                </a>
+
+            </div>
+
+
+            <div class="file">
+
+                <div class="icon">📄</div>
+
+                <div class="file-info">
+                    <div class="file-name">
+                        Cogent Driver
+                    </div>
+
+                    <div class="version">
+                        Latest Version
+                    </div>
+                </div>
+
+                <a class="download" href="#" target="_blank">
+                    Download
+                </a>
+
+            </div>
+
+
+            <div class="file">
+
+                <div class="icon">📄</div>
+
+                <div class="file-info">
+                    <div class="file-name">
+                        Matrix Driver
+                    </div>
+
+                    <div class="version">
+                        Latest Version
+                    </div>
+                </div>
+
+                <a class="download" href="#" target="_blank">
+                    Download
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="section">
+
+            <div class="section-title">
+                📁 Runtime & Tools
+            </div>
+
+            <div class="file">
+
+                <div class="icon">📦</div>
+
+                <div class="file-info">
+                    <div class="file-name">
+                        Runtime Package
+                    </div>
+
+                    <div class="version">
+                        Required Runtime
+                    </div>
+                </div>
+
+                <a class="download" href="#" target="_blank">
+                    Download
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+function searchFiles() {
+
+    let input =
+        document.getElementById("searchBox").value.toLowerCase();
+
+    let files =
+        document.querySelectorAll(".file");
+
+    files.forEach(function(file) {
+
+        let name =
+            file.innerText.toLowerCase();
+
+        if (name.includes(input)) {
+            file.style.display = "flex";
+        } else {
+            file.style.display = "none";
+        }
+
+    });
+}
+</script>
+
+</body>
+</html>
